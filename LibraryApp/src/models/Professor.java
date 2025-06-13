@@ -1,0 +1,24 @@
+package models;
+
+public class Professor extends User{
+
+    private String Departement;
+    
+    public Professor(int id,String userName,String password,String Departement){
+        super(id, userName, password);
+        this.Departement = Departement;
+    }
+
+    public String getDepartement() {
+        return Departement;
+    }
+
+    public void setDepartement(String departement) {
+        Departement = departement;
+    }
+
+    @Override
+    public void displayInfo(){
+        System.out.println("id : " + this.getId() + "username : " + this.getUserName() + "major : " + this.getDepartement());
+    }
+}
