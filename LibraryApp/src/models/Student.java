@@ -7,6 +7,7 @@ public class Student extends User{
     public Student(int id,String userName,String password,String major){
         super(id,userName,password);
         this.major = major;
+        this.setMaxBorrow(3);
     }
 
     public String getMajor() {
