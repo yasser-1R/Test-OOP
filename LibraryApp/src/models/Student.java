@@ -19,7 +19,7 @@ public class Student extends User{
 
     @Override
     public void displayInfo(){
-        System.out.println("id : " + this.getId() + "username : " + this.getUserName() + "major : " + this.getMajor());
+        System.out.println("student id : " + this.getId() + "name : " + this.getUserName() + "major : " + this.getMajor());
     }
 
 }
