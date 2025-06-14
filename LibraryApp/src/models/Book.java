@@ -3,12 +3,12 @@ package models;
 public class Book {
     private int id;
     private String title;
-    private User borrowBy;
+    private int inStock;
 
-    public Book(int id, String title){
+    public Book(int id, String title, int inStock){
         this.id = id;
         this.title = title;
-        this.borrowBy = null;
+        this.inStock = inStock;
     }
 
     public int getId() {
@@ -27,20 +27,16 @@ public class Book {
         this.title = title;
     }
 
-    public User getBorrowBy() {
-        return borrowBy;
+    public int getInStock() {
+        return inStock;
     }
 
-    public void setBorrowBy(User borrowBy) {
-        this.borrowBy = borrowBy;
+    public void setInStock(int inStock) {
+        this.inStock = inStock;
     }
 
     public void displayInfo(){
-        if(this.borrowBy == null){
-            System.out.println("book id : " + this.id + "title : " + this.title + "borrow by : No one");
-        }else{
-            System.out.println("book id : " + this.id + "title : " + this.title + "borrow by " + this.getBorrowBy().toString());
-        }
+        System.out.println("book id : " + this.id + "title : " + this.title + "in Stock : " + this.inStock);
     }
 
 }

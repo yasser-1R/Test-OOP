@@ -1,8 +1,8 @@
 package services;
 
 import models.*;
-import java.util.ArrayList;
-import java.util.List;
+// import java.util.ArrayList;
+// import java.util.List;
 
 public class LibraryService {
 
@@ -26,9 +26,13 @@ public class LibraryService {
         if(user.getMaxBorrow() <= user.getNumBorrow()){
             System.out.println(user.getUserName() + "reach borrow limit");
         }else{
-            book.setBorrowBy(user);
-            user.addBook(book);
-            user.setNumBorrow(user.getNumBorrow()+1);;
+            if(book.getInStock()<=0){
+                System.out.println(book.getTitle() + "out of stock");
+            }else{
+                book.setInStock(book.getInStock()-1);;
+                user.addBook(book);
+                user.setNumBorrow(user.getNumBorrow()+1);
+            }
         }
     }
 
@@ -36,7 +40,7 @@ public class LibraryService {
         if(!user.getBooksBorrowed().contains(book)){
             System.out.println(book.getTitle() + "is not borrowed by" + user.getUserName());
         }else{
-            book.setBorrowBy(null);
+            book.setInStock(book.getInStock()+1);;
             user.removeBook(book);
             user.setNumBorrow(user.getNumBorrow()-1);
         }
