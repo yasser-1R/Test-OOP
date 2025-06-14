@@ -6,7 +6,7 @@ import controller.AuthController;
 
 public class Main {
     public static void main(String[] args) {
-        // Step 1: Initialize fake data
+        // Initialize fake data
         List<Book> books = new ArrayList<>();
         books.add(new Book(1, "Clean Code", 2));
         books.add(new Book(2, "Design Patterns", 1));
