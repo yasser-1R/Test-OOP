@@ -36,7 +36,7 @@ public class Book {
     }
 
     public void displayInfo(){
-        System.out.println("book id : " + this.id + "title : " + this.title + "in Stock : " + this.inStock);
+        System.out.println("book id : " + this.id + " title : " + this.title + " in Stock : " + this.inStock);
     }
 
 }

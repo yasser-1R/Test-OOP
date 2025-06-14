@@ -15,7 +15,7 @@ public class AuthController {
 
         if(authService.authentification(infoUser[0],infoUser[1]) != null){
             User user = authService.findUserByName(infoUser[0]);
-            MenuController.begin(user,books);
+            MenuController.begin(user,books,users);
         }else{
             System.out.println("Authentification failed View ... ");
         }

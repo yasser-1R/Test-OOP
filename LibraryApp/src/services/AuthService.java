@@ -23,7 +23,7 @@ public class AuthService {
 
     public void addUser(User user){
         if(this.users.contains(user)){
-            System.out.println("the user " + user.getUserName() + "is aleready in the list");
+            System.out.println("the user " + user.getUserName() + " is aleready in the list");
         }else{
             this.users.add(user);
         }

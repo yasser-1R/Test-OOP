@@ -12,8 +12,9 @@ import views.MenuView;
 import views.ReturnView;
 
 public class MenuController {
-    public static void begin(User user,List<Book> books){
-        int choice = MenuView.view(user.getUserName());
+    public static void begin(User user,List<Book> books,List<User> users){
+        while(true){
+            int choice = MenuView.view(user.getUserName());
             switch(choice){
                 case 1 ->{
                     BooksListView.view(books);
@@ -33,7 +34,10 @@ public class MenuController {
                     BorrowedBooksView.view(user.getBooksBorrowed());
                     break;
                 }
-//not completed
+                case 0 ->{
+                    AuthController.begin(users, books);
+                }
             }
+        }
     }
 }

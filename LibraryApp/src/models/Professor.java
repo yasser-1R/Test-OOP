@@ -20,6 +20,6 @@ public class Professor extends User{
 
     @Override
     public void displayInfo(){
-        System.out.println("professor id : " + this.getId() + "name : " + this.getUserName() + "departement : " + this.getDepartement());
+        System.out.println("professor id : " + this.getId() + " name : " + this.getUserName() + " departement : " + this.getDepartement());
     }
 }

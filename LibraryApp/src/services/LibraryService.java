@@ -9,10 +9,10 @@ public class LibraryService {
 
     public static void borrowBook(User user , Book book){
         if(user.getMaxBorrow() <= user.getNumBorrow()){
-            System.out.println(user.getUserName() + "reach borrow limit");
+            System.out.println(user.getUserName() + " reach borrow limit");
         }else{
             if(book.getInStock()<=0){
-                System.out.println(book.getTitle() + "out of stock");
+                System.out.println(book.getTitle() + " out of stock");
             }else{
                 book.setInStock(book.getInStock()-1);;
                 user.addBook(book);
@@ -23,7 +23,7 @@ public class LibraryService {
 
     public static void returnBook(User user, Book book){
         if(!user.getBooksBorrowed().contains(book)){
-            System.out.println(book.getTitle() + "is not borrowed by" + user.getUserName());
+            System.out.println(book.getTitle() + " is not borrowed by" + user.getUserName());
         }else{
             book.setInStock(book.getInStock()+1);;
             user.removeBook(book);
