@@ -9,7 +9,7 @@ public class AuthService {
 
     private List<User> users = new ArrayList<>();
 
-    private AuthService(List<User> users){
+    public AuthService(List<User> users){
         this.users = users;
     }
 
@@ -29,12 +29,12 @@ public class AuthService {
         }
     }
 
-    public boolean authentification(String username,String password){
+    public User authentification(String username,String password){
         for(User user:this.users){
             if(user.getUserName().equals(username) && user.getPassword().equals(password)){
-                return true;
+                return user;
             }
         }
-        return false;
+        return null;
     }
 }

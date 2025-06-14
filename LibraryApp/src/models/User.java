@@ -11,6 +11,7 @@ public abstract class User {
     private int numBorrow;
     private int maxBorrow;
     private List<Book> booksBorrowed = new ArrayList<>();
+    private int choice;
 
     public User(int id,String userName,String password){
         this.id = id;
@@ -70,6 +71,20 @@ public abstract class User {
         return booksBorrowed;
     }
 
+    public int getChoice() {
+        return choice;
+    }
+
+    public void setChoice(int choice) {
+        this.choice = choice;
+    }
+
     public abstract void displayInfo();
+
+    // public void setBooksBorrowed(List<Book> booksBorrowed) {
+    //     this.booksBorrowed = booksBorrowed;
+    // }
+
+
 
 }

@@ -1,5 +1,7 @@
 package services;
 
+import java.util.List;
+
 import models.*;
 // import java.util.ArrayList;
 // import java.util.List;
@@ -44,6 +46,15 @@ public class LibraryService {
             user.removeBook(book);
             user.setNumBorrow(user.getNumBorrow()-1);
         }
+    }
+
+    public static Book findBookById(List<Book> books , int id){
+        for(Book book:books){
+            if(book.getId()==id){
+                return book;
+            }
+        }
+        return null;
     }
 
 
