@@ -37,4 +37,13 @@ public class AuthService {
         }
         return null;
     }
+
+    public User findUserByName(String username){
+        for(User user:this.users){
+            if(user.getUserName().equals(username)){
+                return user;
+            }
+        }
+        return null;
+    }
 }

@@ -3,26 +3,9 @@ package services;
 import java.util.List;
 
 import models.*;
-// import java.util.ArrayList;
-// import java.util.List;
+
 
 public class LibraryService {
-
-    // private List<Book> books = new ArrayList<>();
-    // private List<User> users = new ArrayList<>();
-
-    // public LibraryService(ArrayList<Book> books , ArrayList<User> users){
-    //     this.books = books;
-    //     this.users = users;
-    // }
-
-    // public void addBook(Book book){
-    //     this.books.add(book);
-    // }
-
-    // public void addUser(User user){
-    //     this.users.add(user);
-    // }
 
     public static void borrowBook(User user , Book book){
         if(user.getMaxBorrow() <= user.getNumBorrow()){
